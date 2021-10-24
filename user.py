@@ -17,12 +17,11 @@ class User:
         self.username = username
         self.password = password
 
-        def save_user(self):
+    def save_user(self):
             '''
             function to add a new user to the user list
             '''
-
-            User.user_list.append(self)
+            User.user_list.append(self)    
 
         
 
