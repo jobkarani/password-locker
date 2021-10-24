@@ -10,7 +10,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("Job", "ayub09877") #create user object
+        self.new_user = User("Job", "ayub09877", "jk@user.com") #create user object
 
     def test_init(self):
         '''
@@ -18,6 +18,7 @@ class TestUser(unittest.TestCase):
         '''
         self.assertEqual(self.new_user.username, "Job")
         self.assertEqual(self.new_user.password, "ayub09877")
+        self.assertEqual(self.new_user.email, "jk@user.com")
 
     def test_save_user(self):
         '''
@@ -38,7 +39,7 @@ class TestUser(unittest.TestCase):
         to check if we save multiple users.
         '''
         self.new_user.save_user()
-        test_user = User("Jane", "jn8789")
+        test_user = User("Jane", "jn8789", "wk@user.com")
         test_user.save_user()
         self.assertEqual(len(User.user_list), 2)
 
@@ -47,11 +48,24 @@ class TestUser(unittest.TestCase):
         to test if we can remove a user from our user list.
         '''
         self.new_user.save_user()
-        test_user = User("Jane", "jn8789")
+        test_user = User("Jane", "jn8789", "wk@user.com")
         test_user.save_user()
 
         self.new_user.delete_user() #deleting a user object
         self.assertEqual(len(User.user_list), 1)
+
+    def test_find_user_by_username(self):
+        '''
+        to check if we can find a user by their username
+        '''
+        self.new_user.save_user()
+        test_user = User("Jane", "jn8789", "wk@user.com")
+        test_user.save_user()
+
+        found_user = User.find_by_username("Jane")
+        self.assertEqual(found_user.email, test_user.email)
+
+
 
 
 
