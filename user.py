@@ -21,7 +21,14 @@ class User:
             '''
             function to add a new user to the user list
             '''
-            User.user_list.append(self)    
+            User.user_list.append(self)  
+
+    def delete_user(self):
+        '''
+        method deletes a saved user from the user list.
+        '''
+
+        User.user_list.remove(self)  
 
         
 
