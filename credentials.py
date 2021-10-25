@@ -15,3 +15,5 @@ class Credential:
         function to save user credentials
         '''
         Credential.credential_list.append(self)
+
+    
