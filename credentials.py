@@ -32,4 +32,9 @@ class Credential:
         '''
         return cls.credential_list
 
-    def generate_password()
+    def generate_password(length = 6, password = string.digits + string.letters)
+    '''
+    function to generate a random password
+    '''
+    generated_password = ''.join(random.choice(password) for i in range(length))
+    return generated_password
