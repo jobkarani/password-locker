@@ -41,7 +41,16 @@ class TestCredential(unittest.TestCase):
         test_credential = Credential("Tiktok", "sly", "sly1234")
         test_credential.save_credential()
 
-    
+    def test_delete_credential(self):
+        '''
+        test case that checks if a credential can be removed.
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Tiktok", "sly", "sly1234")
+        test_credential.save_credential()
+
+        test_credential.delete_credential()
+        self.assertEqual(len(Credential.credential_list),1)
 
 
 
