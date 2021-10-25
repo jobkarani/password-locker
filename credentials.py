@@ -1,4 +1,7 @@
 class Credential:
+
+    credential_list = []
+
     def __init__(self, social_media, account, password):
         '''
         function helps us define properties of our objects
