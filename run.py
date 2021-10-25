@@ -123,6 +123,7 @@ def main():
             print("Enter your password")
             password = input()
             print("*" * 8)
+            
 
         else:
             print("Bye :)")

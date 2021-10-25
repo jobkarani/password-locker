@@ -1,3 +1,6 @@
+import random
+import string
+
 class Credential:
 
     credential_list = []
@@ -28,3 +31,5 @@ class Credential:
         function to display all user credentials
         '''
         return cls.credential_list
+
+    def generate_password()
