@@ -16,7 +16,7 @@ class TestCredential(unittest.TestCase):
         tests if the objects are being initialized properly.
         '''
         self.assertEqual(self.new_credential.social_media, "Instagram")
-        self.assertEqual(self.new_credential.account, "ayub")
+        self.assertEqual(self.new_credential.profile, "ayub")
         self.assertEqual(self.new_credential.password, "ayub1234")
         
 

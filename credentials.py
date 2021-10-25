@@ -5,12 +5,12 @@ class Credential:
 
     credential_list = []
 
-    def __init__(self, social_media, account, password):
+    def __init__(self, social_media, profile, password):
         '''
         function helps us define properties of our objects
         '''
         self.social_media = social_media
-        self.account = account
+        self.profile = profile
         self.password = password 
 
     def save_credential(self):
@@ -32,9 +32,9 @@ class Credential:
         '''
         return cls.credential_list
 
-    def generate_password(length = 6, password = string.digits + string.letters)
-    '''
-    function to generate a random password
-    '''
-    generated_password = ''.join(random.choice(password) for i in range(length))
-    return generated_password
+    def generate_password(length = 6, password = string.hexdigits):
+        '''
+        function to generate a random password
+        '''
+        generated_password = ''.join(random.choice(password) for i in range(length))
+        return generated_password
