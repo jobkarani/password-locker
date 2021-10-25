@@ -21,3 +21,10 @@ class Credential:
         function to delete user credentials
         '''
         Credential.credential_list.remove(self)
+
+    @classmethod
+    def display_credential(cls):
+        '''
+        function to display all user credentials
+        '''
+        return cls.credential_list

@@ -52,6 +52,16 @@ class TestCredential(unittest.TestCase):
         test_credential.delete_credential()
         self.assertEqual(len(Credential.credential_list),1)
 
+    def test_display_all_credential(self):
+        '''
+        test case to check whether we can display all user credentials.
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential("Tiktok", "sly", "sly1234")
+        test_credential.save_credential()
+
+        self.assertEqual(Credential.display_credential(), Credential.credential_list)
+
 
 
 if __name__ == '__main__':
