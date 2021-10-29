@@ -2,7 +2,7 @@
 
 ## 25-10-2021
 
-## Author {Job Karani}
+## Author Job Karani
 
 ## Description
 This is an application that allows users to store their information.They can store their social media usernames, passwords and other credentials.

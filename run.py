@@ -157,7 +157,7 @@ def main():
                         social_media = input()
 
                         print("*" * 8)
-                        print("What is your {social_media} account profile?")
+                        print(f"What is your {social_media} account profile?")
                         profile = input()
 
                         while True:
